@@ -15,4 +15,9 @@ Can be used for initial download and subsequent updates
 creates table as ORC in hive and loads data from multiple scv files in HDFS downloaded by bash script. No partitionaing or clustering.
 Script can be used to upgrade data as well (inserts only rows that do not exists) 
 
+Loading epidemic cases to hbase
+----------------------------------
+
+1. script get_hbase.sh contains bash commands to upload raw scv file from Lancet git repository to hdfs
+2. script  CSV_TO_HIVE_TOHBASE.hql loads data from scv to hdfs with transformation. It generates row-keys . It still doesnt load full data yet
 
